@@ -61,6 +61,7 @@ exports.jsonRuleTwo  = (req, res)  => {
     console.log(
       facts.accountId + ' is a ' + events.map((event) => event.params.message)
     );
+    res.send(facts.accountId + ' is a ' + events.map((event) => event.params.message))
   }
   start();
 }

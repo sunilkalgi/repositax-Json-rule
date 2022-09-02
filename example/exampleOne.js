@@ -53,8 +53,9 @@ exports.jsonRuleOne  = (req, res)  => {
       // Run the engine to evaluate
       engine.run(facts).then(({ events }) => {
         events.map((event) =>
-        // (event.params.message)
-         console.log(event.params.message)
+        // console.log(event.params.message)
+        res.send(event.params.message)
+         
          );
       });
 }
